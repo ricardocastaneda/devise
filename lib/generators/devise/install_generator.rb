@@ -14,13 +14,21 @@ module Devise
       end
 
       def copy_locale
-        #copy_file "../../../app/controllers/applicat"
         copy_file "../../../config/locales/en.yml", "config/locales/devise.en.yml"
         copy_file "../../../config/locales/es.yml", "config/locales/devise.es.yml"
-
-        devise_route << %Q(, class_name: "#{class_name}") if class_name.include?("::")
-        File.write('/app/controllers/application_controller.rb', 'Some glorious content')
       end
+
+      File.open('app/controllers/application_controller.rb', 'a') { |f|
+        f << "# Insert this code inside class ApplicationController < ActionController::Base\n"
+        f << "# Necessary to make Devise Work with username\n"
+        f << "# before_action :configure_permitted_parameters, if: :devise_controller?\n"
+        f << "# protected\n"
+        f << "# def configure_permitted_parameters\n"
+        f << "#   devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :remember_me) } \n"
+        f << "#   devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :username, :email, :password, :remember_me) }\n"
+        f << "#   devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :email, :password, :password_confirmation, :current_password) }\n"
+        f << "# end\n"
+      }
 
       def show_readme
         readme "README" if behavior == :invoke
