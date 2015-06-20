@@ -3,10 +3,32 @@ module Devise
     module OrmHelpers
       def model_contents
         buffer = <<-CONTENT
+  attr_accessor :login
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
+
+  def self.find_for_database_authentication(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions.to_hash).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+    else
+      if conditions[:username].nil?
+        where(conditions.to_hash).first
+      else
+        where(username: conditions[:username]).first
+      end
+    end
+  end
+
+  validates :username,
+    presence: true,
+    length: {maximum: 55},
+    uniqueness: { case_sensitive: false },
+    format: { with: /\A[a-zA-Z0-9]*\z/,
+              message: "may only contain letters and numbers." }
+
 
 CONTENT
         buffer += <<-CONTENT if needs_attr_accessible?

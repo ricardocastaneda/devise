@@ -14,6 +14,7 @@ module Devise
       end
 
       def copy_locale
+        #copy_file "../../../app/controllers/applicat"
         copy_file "../../../config/locales/en.yml", "config/locales/devise.en.yml"
         copy_file "../../../config/locales/es.yml", "config/locales/devise.es.yml"
       end

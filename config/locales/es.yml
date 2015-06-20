@@ -60,3 +60,34 @@ es:
         one: "1 error impidió que este %{resource} fuera guardado:"
         other: "%{count} errores impidieron que este %{resource} fuera guardado:"
 
+  title:
+    confirmations:
+      new:
+      submit:
+    mailer:
+      confirmation:
+      reset:
+      unlock:
+    passwords:
+      edit:
+      new:
+      submit_change:
+      submit_send:
+    registrations:
+      edit:
+      new:
+      submit_update:
+      submit_new:
+    sessions:
+      new:
+      submit_login:
+    unlocks:
+      new:
+      submit_resend:
+  links:
+    login:
+    signup:
+    forgot:
+    not_confirmation:
+    not_unlock:
+    signin_with:

@@ -58,3 +58,37 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+
+  title:
+    confirmations:
+      new:
+      submit:
+    mailer:
+      confirmation:
+      reset:
+      unlock:
+    passwords:
+      edit:
+      new:
+      submit_change:
+      submit_send:
+    registrations:
+      edit:
+      new:
+      submit_update:
+      submit_new:
+    sessions:
+      new: Log in
+      submit_login: Log in
+    unlocks:
+      new:
+      submit_resend:
+  links:
+    login:
+    signup:
+    forgot:
+    not_confirmation:
+    not_unlock:
+    signin_with:
+
+
