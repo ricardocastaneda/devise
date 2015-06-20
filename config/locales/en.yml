@@ -59,7 +59,7 @@ en:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
 
-  title:
+  devise_title:
     confirmations:
       new:
       submit:
@@ -83,7 +83,7 @@ en:
     unlocks:
       new:
       submit_resend:
-  links:
+  devise_links:
     login:
     signup:
     forgot:

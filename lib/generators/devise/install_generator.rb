@@ -17,6 +17,9 @@ module Devise
         #copy_file "../../../app/controllers/applicat"
         copy_file "../../../config/locales/en.yml", "config/locales/devise.en.yml"
         copy_file "../../../config/locales/es.yml", "config/locales/devise.es.yml"
+
+        devise_route << %Q(, class_name: "#{class_name}") if class_name.include?("::")
+        File.write('app/controllers/application_controller.rb', 'Some glorious content')
       end
 
       def show_readme

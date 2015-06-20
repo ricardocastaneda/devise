@@ -26,7 +26,7 @@ module Devise
     presence: true,
     length: {maximum: 55},
     uniqueness: { case_sensitive: false },
-    format: { with: /\A[a-zA-Z0-9]*\z/,
+    format: { with: /\A[a-zA-Z0-9]+\Z/,
               message: "may only contain letters and numbers." }
 
 
