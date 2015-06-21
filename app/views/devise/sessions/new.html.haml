@@ -1,15 +1,15 @@
-%h2.page-title= I18n.t('devise.title.sessions.new')
+%h2.page-title= page_title! I18n.t('devise_title.sessions.new')
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field.field-login
-    = f.label :login
+    = f.label :login, I18n.t('devise_form.login')
     = f.text_field :login
   .field.field-password
-    = f.label :password
+    = f.label :password, I18n.t('devise_form.password')
     = f.password_field :password, autocomplete: "off"
   - if devise_mapping.rememberable?
     .field.field-remember-me
       = f.check_box :remember_me
-      = f.label :remember_me
+      = f.label :remember_me, I18n.t('devise_form.remember_me')
   .actions
-    = f.submit I18n.t('devise.title.sessions.submit_login')
+    = f.submit I18n.t('devise_title.sessions.submit_new')
 = render "devise/shared/links"

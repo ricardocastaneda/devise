@@ -1,30 +1,33 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
+- page_title! I18n.t('devise_title.registrations.edit') + ' ' + resource_name.to_s.humanize
+
+%h2.page-title
+  = "#{I18n.t('devise_title.registrations.edit') + ' <span>' + resource_name.to_s.humanize + '</span>'}".html_safe
+
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = devise_error_messages!
   .field.username
-    = f.label :username
+    = f.label :username, I18n.t('devise_form.username')
     = f.text_field :username
   .field.field-email
-    = f.label :email
+    = f.label :email, I18n.t('devise_form.email')
     = f.email_field :email, autofocus: true
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
+    .field-unconfirmed
+      = "#{I18n.t('devise_form.currently_waiting') + ' ' + resource.unconfirmed_email}"
   .field.field-password
-    = f.label :password
-    %i (leave blank if you don't want to change it)
+    = f.label :password, I18n.t('devise_form.password_change')
     = f.password_field :password, autocomplete: "off"
   .field.field-password-confirmation
-    = f.label :password_confirmation
+    = f.label :password_confirmation, I18n.t('devise_form.password_confirmation')
     = f.password_field :password_confirmation, autocomplete: "off"
   .field.field-current-password
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
+    = f.label :current_password, I18n.t('devise_form.password_current')
+    %i=I18n.t('devise_form.password_current_confirm')
     = f.password_field :current_password, autocomplete: "off"
   .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+    = f.submit I18n.t('devise_title.registrations.submit_edit')
+%h3= I18n.t('devise_form.cancel_account')
+.action-unhappy
+  = I18n.t('devise_form.unhappy')
+  = button_to I18n.t('devise_form.cancel_account'), registration_path(resource_name), data: { confirm: I18n.t('devise_form.you_sure') }, method: :delete
+= link_to I18n.t('devise_form.back'), :back

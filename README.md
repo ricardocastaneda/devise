@@ -17,6 +17,8 @@ Branch that adds these features:
 - Enables by default custom views scope
 - All views are generated with haml instead of erb
 - Each view will have a page title helper
+- Generates app/views/layouts/devise.html.haml layout
+- Generates a devise bar in app/views/layouts/_devise_bar.html.haml (you have to modify it)
 
 Don't forget to open app/controllers/application_controller.rb and follow the instructions there
 You have to uncomment the Message and insert it inside class ApplicationController < ActionController::Base

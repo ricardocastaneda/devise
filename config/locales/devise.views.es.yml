@@ -1,0 +1,58 @@
+
+
+es:
+  devise_title:
+    confirmations:
+      new: Reenviar instrucciones de confirmación
+      submit: Reenviar instrucciones de confirmación
+    mailer:
+      confirmation:
+      reset:
+      unlock:
+    passwords:
+      edit: Modifica tu contraseña
+      new: ¿Olvidaste tu contraseña?
+      submit_edit: Cambiar mi contraseña
+      submit_new: Enviarme instrucciones para reestablecer mi contraseña
+    registrations:
+      edit: Editar
+      new: Registrarse
+      submit_edit: Actualizar
+      submit_new: Registrarse
+    sessions:
+      new: Acceder
+      submit_new: Acceder
+    unlocks:
+      new: Reenviar instrucciones de desbloqueo
+      submit_resend: Reenviar instrucciones de desbloqueo
+  devise_links:
+    login: Acceder
+    sign_up: Registrarse
+    forgot: ¿Olvidaste tu contraseña?
+    no_confirmation: ¿No recibiste las instrucciones de confirmación?
+    no_unlock: ¿no recibiste las instrucciones de desbloqueo?
+    sign_in_with: Acceder con
+
+  devise_form:
+    login: Usuario or E-mail
+    username: Usuario
+    email: E-mail
+    password: Contraseña
+    password_new: Contraseña
+    password_new_confirm: Confirmar nueva contraseña
+    password_confirmation: Confirmar contraseña
+    password_change: Cambiar contraseña
+    password_current: Contraseña actual
+    password_current_confirm: (se requiere tu contraseña actual para proceder con los cambios)
+    cancel_account: ¿Cancelar mi cuenta?
+    you_sure: ¿Estás seguro que deseas cancelar tu cuenta?
+    unhappy: ¿Disconforme?
+    remember_me: Recordarme
+    minimum_length: caracteres mínimo
+    leave_blank: (dejar en blanco si no hay cambios)
+    currently_waiting: Actualmente esperando confirmación en "#{:}"
+    back: Regresar
+
+
+
+

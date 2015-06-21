@@ -1,9 +1,10 @@
-%h2 Resend unlock instructions
+%h2.page-title= page_title! I18n.t('devise.title.unlocks.new')
+
 = form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
   = devise_error_messages!
   .field.field-email
-    = f.label :email
+    = f.label :email, I18n.t('devise_form.email')
     = f.email_field :email, autofocus: true
   .actions
-    = f.submit "Resend unlock instructions"
+    = f.submit I18n.t('devise.title.unlocks.submit_new')
 = render "devise/shared/links"

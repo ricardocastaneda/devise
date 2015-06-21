@@ -16,6 +16,12 @@ module Devise
       def copy_locale
         copy_file "../../../config/locales/en.yml", "config/locales/devise.en.yml"
         copy_file "../../../config/locales/es.yml", "config/locales/devise.es.yml"
+
+        copy_file "../../../config/locales/devise.views.en.yml", "config/locales/devise.views.en.yml"
+        copy_file "../../../config/locales/devise.views.es.yml", "config/locales/devise.views.es.yml"
+
+        copy_file "../../../app/views/layouts/devise.html.haml", "app/views/layouts/devise.html.haml"
+        copy_file "../../../app/views/layouts/_devise_bar.html.haml", "app/views/layouts/_devise_bar.html.haml"
       end
 
       File.open('app/controllers/application_controller.rb', 'a') { |f|

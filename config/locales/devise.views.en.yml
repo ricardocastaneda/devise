@@ -1,0 +1,57 @@
+
+
+en:
+  devise_title:
+    confirmations:
+      new: Resend confirmation instructions
+      submit: Resend confirmation instructions
+    mailer:
+      confirmation:
+      reset:
+      unlock:
+    passwords:
+      edit: Change your password
+      new: Forgot your password?
+      submit_edit: Change my password
+      submit_new: Send me reset password instructions
+    registrations:
+      edit: Edit
+      new: Sign up
+      submit_edit: Update
+      submit_new: Sign up
+    sessions:
+      new: Log in
+      submit_new: Log in
+    unlocks:
+      new: Resend unlock instructions
+      submit_resend: Resend unlock instructions
+  devise_links:
+    login: Log in
+    sign_up: Sign Up
+    forget: Forgot your password?
+    forgot: Forgot your password?
+    no_confirmation: Didn't receive confirmation instructions?
+    no_unlock: Didn't receive unlock instructions?
+    sign_in_with: Sign in with
+
+  devise_form:
+    login: Username or E-mail
+    username: Username
+    email: E-mail
+    password: Password
+    password_new: New password
+    password_new_confirm: Confirm new password
+    password_confirmation: Confirm password
+    password_change: Change password
+    password_current: Current password
+    password_current_confirm: (we need your current password to confirm your changes)
+    cancel_account: Cancel my account?
+    you_sure: Are you sure you want to cancel your account?
+    unhappy: Unhappy?
+    remember_me: Remember me
+    minimum_length: characters minimum
+    leave_blank: (leave blank if you don't want to change it)
+    currently_waiting: Currently waiting confirmation for "#{:}"
+    back: Back
+
+

@@ -1,16 +1,17 @@
-%h2 Change your password
+%h2.page-title= page_title! I18n.t('devise_title.passwords.edit')
+
 = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
   = devise_error_messages!
   = f.hidden_field :reset_password_token
   .field.field-password
-    = f.label :password, "New password"
+    = f.label :password, I18n.t('devise_form.password_new')
     = f.password_field :password, autofocus: true, autocomplete: "off"
     - if @minimum_password_length
       %em
-        (#{@minimum_password_length} characters minimum)
+        (#{@minimum_password_length} "#{I18n.t('devise_form.minimum_length')})
   .field.field-password-confirm
-    = f.label :password_confirmation, "Confirm new password"
+    = f.label :password_confirmation, I18n.t('devise_form.password_new_confirm')
     = f.password_field :password_confirmation, autocomplete: "off"
   .actions
-    = f.submit "Change my password"
+    = f.submit I18n.t('devise_title.passwords.submit_edit')
 = render "devise/shared/links"
