@@ -32,6 +32,8 @@ es:
     no_confirmation: ¿No recibiste las instrucciones de confirmación?
     no_unlock: ¿no recibiste las instrucciones de desbloqueo?
     sign_in_with: Acceder con
+    my_account: Mi cuenta
+    sign_out: Desconectarse
 
   devise_form:
     login: Usuario or E-mail

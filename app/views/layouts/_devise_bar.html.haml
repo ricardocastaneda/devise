@@ -1,14 +1,16 @@
 .logged-bar
   %ul
     %li
-      Print current_admin.username
+      current_admin.username
+      = #current_admin.username
       // current_user.username
       // current_yourclass.username
       %ul
         %li
-          = link_to I18n.t('my_account'), '/'
+          = link_to I18n.t('devise_links.my_account'), '/'
         %li
-          = link_to('I18n.t("sign_out") <i class="fa fa-sign-out"></i>'.html_safe, 'destroy_admin_session_path', :method => :delete)
-          destroy_user_session_path
-          destroy_admin_session_path
-          destroy_yourclass_session_path
+          = link_to("#{I18n.t('devise_links.sign_out') + ' ' + '<i class="fa fa-sign-out"></i>'}".html_safe, 'destroy_admin_session_path', :method => :delete)
+          -#
+            destroy_user_session_path
+            destroy_admin_session_path
+            destroy_yourclass_session_path

@@ -1,4 +1,8 @@
-%h2.page-title= page_title! I18n.t('devise_title.sessions.new')
+
+
+
+
+%h2.page-title= page_title! I18n.t('devise_title.sessions.new'), ':title'
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field.field-login
     = f.label :login, I18n.t('devise_form.login')

@@ -33,6 +33,8 @@ en:
     no_confirmation: Didn't receive confirmation instructions?
     no_unlock: Didn't receive unlock instructions?
     sign_in_with: Sign in with
+    my_account: My account
+    sign_out: Log out
 
   devise_form:
     login: Username or E-mail
