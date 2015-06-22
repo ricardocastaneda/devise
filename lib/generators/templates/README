@@ -9,7 +9,9 @@ Some setup you must do manually if you haven't yet:
 
   Now go to app/controllers/application_controller.rb and follow the instructions
 
-  Don't forget to install gem page_title_helper
+  a) Don't forget to install gem page_title_helper
+  b) It will use app/views/layouts/devise.html.haml, instead of application.html.haml
+  c) A devise bar will be generated, you have to edit links there
 
 
   1. Ensure you have defined default url options in your environments files. Here
